@@ -18,5 +18,10 @@ describe Fib  do
 	it "should retturn 55 with argument 10" do
 		@fib.get(10).should == 55
 	end
+	it "should raise RuntimeError with argument 0" do
+		lambda do
+			@fib.get(0)
+		end.should raise_error RuntimeError
+	end
 end
 
